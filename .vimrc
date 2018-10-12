@@ -39,6 +39,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+function! BuildYCM(info)
+	!sudo apt update
+	!sudo apt install build-essential cmake python3-dev -y
+	!python3 ./install.py --all
+endfunction
+
 call plug#begin('~/.vim/plugged')
 " Utility
 Plug 'scrooloose/nerdtree'
@@ -48,7 +54,7 @@ Plug 'benmills/vimux'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Programming Support
-Plug 'valloric/youcompleteme'  " Need manual installation
+Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
 Plug 'raimondi/delimitmate'
 Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
