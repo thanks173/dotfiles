@@ -45,6 +45,11 @@ function! BuildYCM(info)
 	!python3 ./install.py --all
 endfunction
 
+function! InstallNerdFonts(info)
+	!mkdir -p ~/.local/share/fonts
+	!cd ~/.local/share/fonts && wget "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid Sans Mono Nerd Font Complete.otf"
+endfunction
+
 call plug#begin('~/.vim/plugged')
 " Utility
 Plug 'scrooloose/nerdtree'
@@ -64,7 +69,7 @@ Plug 'airblade/vim-gitgutter'
 " Theme / Interface
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'  " Need addtional font
+Plug 'ryanoasis/vim-devicons', { 'do': function('InstallNerdFonts') }
 call plug#end()
 
 " -------- Key Mapping --------
