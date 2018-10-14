@@ -34,9 +34,9 @@ set shiftwidth=2
 
 " -------- Auto Install VimPlug --------
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 function! BuildYCM(info)
@@ -97,7 +97,7 @@ let g:syntastic_check_on_wq = 0
 " -------- Customize VimAirline --------
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-      let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 
 let g:airline_symbols.space = "\ua0"
