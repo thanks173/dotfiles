@@ -11,6 +11,8 @@
 
 ## Additional stuff which required manual installation
 
+* [Zsh](http://www.zsh.org/) - [instruction](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+* [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [fd](https://github.com/sharkdp/fd)
 
 ## Thanks to…
