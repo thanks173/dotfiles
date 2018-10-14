@@ -11,9 +11,11 @@
 
 ## Additional stuff which required manual installation
 
-* [Zsh](http://www.zsh.org/) - [instruction](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-* [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 * [fd](https://github.com/sharkdp/fd)
+* [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## Thanks to…
 
