@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # User configuration
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$(yarn global bin)
 
 export HISTSIZE=999999
 export HISTFILESIZE=999999
@@ -91,4 +91,7 @@ export FZF_DEFAULT_OPS="--extended"
 export FZF_CTRL_T_OPTS="--preview 'head -100 {}'"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Execute the last command directly with '!!'
+unsetopt HIST_VERIFY
 
