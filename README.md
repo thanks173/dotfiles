@@ -15,7 +15,6 @@
 * [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## Thanks to…
 
