@@ -1,0 +1,22 @@
+#!/bin/bash
+
+IBUS_ENGINE=$(/usr/bin/ibus engine)
+
+# Command returned an error, maybe ibus-daemon is not started
+if [[ "$?" != "0" ]]; then
+  exit 1
+fi
+
+IBUS_METHOD="${IBUS_ENGINE}"
+if [[ "${IBUS_ENGINE}" == "xkb:us::eng" ]]; then
+  IBUS_METHOD="en"
+fi
+
+if [[ "${IBUS_ENGINE}" == "Unikey" ]]; then
+  IBUS_METHOD="vi"
+fi
+
+echo "${IBUS_METHOD}"
+echo "${IBUS_METHOD}"
+echo ""
+
