@@ -1,0 +1,73 @@
+[global_config]
+  borderless = True
+  broadcast_default = off
+  scroll_tabbar = True
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[4-parts]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 15:327
+      size = 663, 713
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 331
+      ratio = 0.503039513678
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 356
+      ratio = 0.502824858757
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 356
+      ratio = 0.502824858757
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
