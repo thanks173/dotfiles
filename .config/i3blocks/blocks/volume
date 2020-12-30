@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Left click
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+	pactl set-sink-volume 0 +5%
+fi
+
+# Middle click
+if [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+	pactl set-sink-mute 0 toggle
+fi
+
+# Right click
+if [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+	pactl set-sink-volume 0 -5%
+fi
+
+getDefaultSinkName() {
+	pacmd stat | awk -F": " '/^Default sink name: /{print $2}'
+}
+
+getDefaultSinkVol() {
+	pacmd list-sinks |
+		awk '/^\s+name: /{indefault = $2 == "<'$(getDefaultSinkName)'>"}
+	/^\s+volume: / && indefault {print $5; exit}'
+}
+
+getDefaultSinkMutedStatus() {
+	pacmd list-sinks |
+		awk '/^\s+name: /{indefault = $2 == "<'$(getDefaultSinkName)'>"}
+	/^\s+muted: / && indefault {print $2; exit}'
+}
+
+mutedStatus=$(getDefaultSinkMutedStatus)
+volume=$(getDefaultSinkVol)
+
+if [[ "${mutedStatus}" == "no" ]]; then
+	echo "${volume}"
+	echo "${volume}"
+	echo ""
+else
+	echo "off"
+	echo "off"
+	echo ""
+fi

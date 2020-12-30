@@ -1,0 +1,103 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+#command=/usr/lib/i3blocks/$BLOCK_NAME
+command=~/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# =========================
+# == Block specification ==
+# =========================
+
+[ibus]
+color=#c2c2c2
+label=
+interval=1
+
+[volume]
+color=#c2c2c2
+label=
+interval=5
+
+#[microphone]
+#label=
+#interval=5
+
+#[battery]
+#label=
+#instance=0
+#interval=5
+
+#[bluetooth]
+#label=
+#interval=10
+
+#[brightness]
+#label=
+#interval=5
+
+
+[cpu]
+color=#c2c2c2
+label=
+interval=5
+
+[memory]
+color=#c2c2c2
+label=
+instance=mem;perc
+interval=5
+
+#[user]
+#label=
+#interval=once
+
+[ip-address]
+color=#c2c2c2
+label=
+interval=60
+
+#[network]
+#label=
+#instance=enp3s0
+#interval=10
+
+#[network]
+#label=
+#instance=wlp3s0
+#interval=10
+
+[datetime]
+color=#c2c2c2
+label=
+interval=5
+
+[shutdown_menu]
+color=#c2c2c2
+full_text=<span alpha='1%'>.</span>
+markup=pango
+min_width=20
